@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:english_words/english_words.dart';
-import 'scaffold_route.dart';
-import 'single_child_scroll_view_route.dart';
-import 'list_view.dart';
-import 'grid_view.dart';
-import 'custom_scroll_view_page.dart';
+import 'route/route.dart';
+import 'home/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,14 +26,8 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.yellow,
         ),
-        home: ScaffoldRoute(), // MyHomePage(title: 'Flutter Demo Home Page'),
-        routes: {
-          "new_page": (context) => NewRoute(text: '123'),
-          "single_scroll_page": (context) => SingleChildScrollViewRoute(),
-          "list_view_page": (context) => InfiniteListView(),
-          "grid_view_page": (context) => InfiniteGridView(),
-          "custom_view_page": (context) => CustomScrollViewTestRoute(),
-        },
+        home: Home(), // MyHomePage(title: 'Flutter Demo Home Page'),
+        routes: routes,
         onGenerateRoute: (RouteSettings settings) {
           return MaterialPageRoute(builder: (_context) {
             String routeName = settings.name;
