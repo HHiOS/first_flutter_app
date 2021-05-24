@@ -157,16 +157,12 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           children: [
             IconButton(
               icon: Icon(Icons.home),
-              onPressed: () {
-                Navigator.pushNamed(context, 'custom_view_page');
-              },
+              onPressed: () {},
             ),
             SizedBox(),
             IconButton(
               icon: Icon(Icons.business),
-              onPressed: () {
-                Navigator.pushNamed(context, 'grid_view_page');
-              },
+              onPressed: () {},
             ),
           ],
           mainAxisAlignment: MainAxisAlignment.spaceAround,
