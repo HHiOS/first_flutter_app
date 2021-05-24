@@ -1,10 +1,12 @@
-import 'package:first_flutter_app/gesture/gesture_conflict_page.dart';
 import 'package:flutter/material.dart';
 import '../main.dart';
-import '../single_child_scroll_view_route.dart';
-import '../list_view.dart';
-import '../grid_view.dart';
-import '../custom_scroll_view_page.dart';
+
+// 可滚动组件
+import '../scroll/scroll_page.dart';
+import '../scroll/scroll_single_child_page.dart';
+import '../scroll/scroll_list_page.dart';
+import '../scroll/scroll_grid_page.dart';
+import '../scroll/scroll_custom_page.dart';
 
 // 事件
 import '../gesture/gesture_page.dart';
@@ -27,10 +29,11 @@ import '../animation/animation_custom_page.dart';
 
 final Map<String, WidgetBuilder> routes = {
   "new_page": (context) => NewRoute(text: '123'),
-  "single_scroll_page": (context) => SingleChildScrollViewRoute(),
-  "list_view_page": (context) => InfiniteListView(),
-  "grid_view_page": (context) => InfiniteGridView(),
-  "custom_view_page": (context) => CustomScrollViewTestRoute(),
+  "scroll_page": (context) => ScrollTestPage(),
+  "scroll_single_child_page": (context) => ScrollSingleChildTestPage(),
+  "scroll_list_page": (context) => ScrollListTestPage(),
+  "scroll_grid_page": (context) => ScrollGridTestPage(),
+  "scroll_custom_page": (context) => ScrollCustomTestPage(),
   "gesture_page": (context) => GestureTestPageRoute(),
   "gesture_listener_page": (context) => GestureListenerTestPage(),
   "gesture_detector_page": (context) => GestureDetectorTestPage(),

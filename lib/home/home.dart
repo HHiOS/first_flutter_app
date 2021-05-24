@@ -16,6 +16,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   List _tabs = ['新闻', '历史', '图片'];
 
   List _items = [
+    '可滚动组件',
     '事件处理',
     '通知',
     '动画',
@@ -23,7 +24,9 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
 
   void clickList(int index) {
     String item = _items[index];
-    if (item == '事件处理') {
+    if (item == '可滚动组件') {
+      Navigator.of(context).pushNamed('scroll_page');
+    } else if (item == '事件处理') {
       Navigator.of(context).pushNamed('gesture_page');
     } else if (item == '通知') {
       Navigator.of(context).pushNamed('notification_page');
