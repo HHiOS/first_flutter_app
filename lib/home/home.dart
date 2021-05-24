@@ -18,6 +18,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   List _items = [
     '事件处理',
     '通知',
+    '动画',
   ];
 
   void clickList(int index) {
@@ -26,6 +27,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       Navigator.of(context).pushNamed('gesture_page');
     } else if (item == '通知') {
       Navigator.of(context).pushNamed('notification_page');
+    } else if (item == '动画') {
+      Navigator.of(context).pushNamed('animation_page');
     }
   }
 
