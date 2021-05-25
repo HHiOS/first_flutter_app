@@ -27,6 +27,13 @@ import '../animation/animation_stagger_page.dart';
 import '../animation/animation_switcher_page.dart';
 import '../animation/animation_custom_page.dart';
 
+// 自定义组件
+import '../custom/custom_page.dart';
+import '../custom/custom_gradient_button_page.dart';
+import '../custom/custom_turn_box_page.dart';
+import '../custom/custom_paint_page.dart';
+import '../custom/custom_indicator_page.dart';
+
 final Map<String, WidgetBuilder> routes = {
   "new_page": (context) => NewRoute(text: '123'),
   "scroll_page": (context) => ScrollTestPage(),
@@ -47,4 +54,9 @@ final Map<String, WidgetBuilder> routes = {
   "animation_stagger_page": (context) => AnimationStaggerTestPage(),
   "animation_switcher_page": (context) => AnimationSwitcherTestPage(),
   "animation_custom_page": (context) => AnimationCustomTestPage(),
+  "custom_page": (context) => CustomTestPage(),
+  "custom_gradient_button_page": (context) => CustomGradientButtonPage(),
+  "custom_turn_box_page": (context) => CustomTurnBoxTestPage(),
+  "custom_paint_page": (context) => CustomPaintTestPage(),
+  "custom_indicator_page": (context) => CustomIndicatorTestPage(),
 };

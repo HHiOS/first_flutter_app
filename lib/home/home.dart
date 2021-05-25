@@ -20,6 +20,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     '事件处理',
     '通知',
     '动画',
+    '自定义组件',
   ];
 
   void clickList(int index) {
@@ -32,6 +33,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       Navigator.of(context).pushNamed('notification_page');
     } else if (item == '动画') {
       Navigator.of(context).pushNamed('animation_page');
+    } else if (item == '自定义组件') {
+      Navigator.of(context).pushNamed('custom_page');
     }
   }
 
